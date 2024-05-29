@@ -1,0 +1,83 @@
+.app {
+  display: flex;
+}
+
+.sidebar {
+  width: 200px;
+  background-color: #f4f4f4;
+  padding: 20px;
+  align-items: center;
+}
+
+.sidebar ul {
+  list-style: none;
+  padding: 0;
+}
+
+.sidebar li {
+  cursor: pointer;
+  width: 100%;
+  height: 40px;
+  display: flex;
+  justify-content: center; /* Centrar horizontalmente */
+  align-items: center;    /* Centrar verticalmente */
+  margin-bottom: 20px;
+  background-color: #e9e9e9;
+  border-radius: 8px;
+  color: #262626;
+  font-weight: normal;
+}
+.sidebar li:hover {
+  color: #262626;
+  font-weight: bold;
+  background-color: white;
+  filter: drop-shadow(0px 0px 15px #0000003b);
+}
+.content{
+  height: 100dvh;
+  flex-grow: 1;
+}
+.titulo{
+  margin-top: 0px;
+  padding: 50px;
+  font-weight: bolder;
+  font-size: 40px;
+  font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif
+}
+
+.fotoprueba{
+  margin: 0;
+  position: absolute;
+  bottom: 30px;
+  right: 30px;
+  transition: filter 0.5s;
+  filter: drop-shadow(0px 0px 15px #ff0000) blur(5px);
+  height: 500px;
+  animation: rotateAnimation 10s linear infinite;
+}
+.fotoprueba:hover{
+  cursor: pointer;
+  filter: drop-shadow(0px 0px 15px #ff0000) blur(0px);
+}
+
+.fondoinicio{
+  height: 100%;
+  background-size: cover;
+  background-image: url('/public/Imagenes/fondo.jpg');
+}
+
+@keyframes rotateAnimation {
+  0% {
+    transform: rotate(-5deg); /* Comienza girando 15 grados hacia la izquierda */
+  }
+  50% {
+    transform: rotate(5deg); /* En el punto medio de la animación, gira 15 grados hacia la derecha */
+  }
+  100% {
+    transform: rotate(-5deg); /* Termina volviendo a la posición inicial */
+  }
+}
+
+nav a{
+  text-decoration: none;
+}
